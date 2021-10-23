@@ -107,14 +107,6 @@ body {
   color: var(--accent-color);
 }
 
-.social-media__list {
-  display: flex;
-}
-
-.social-media_item:not(:last-child) {
-  margin-right: 10px;
-}
-
 .social-media__link {
   display: flex;
   align-items: center;
@@ -150,6 +142,14 @@ body {
 
 .social-media__link .social-media__svg {
   transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.social-media__list {
+  display: flex;
+}
+
+.social-media_item:not(:last-child) {
+  margin-right: 10px;
 }
 
 .page-header {
@@ -291,7 +291,20 @@ body {
   padding: 94px 0px;
 }
 
-.section-lead__feature--wrapper {
+.section-lead__list {
+  display: flex;
+}
+
+.section-lead__item {
+  width: 270px;
+  height: auto;
+}
+
+.section-lead__item:not(:last-child) {
+  margin-right: 30px;
+}
+
+.section-lead-feature {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -301,7 +314,7 @@ body {
   margin-bottom: 30px;
 }
 
-.section-lead__feature--svg {
+.section-lead-feature__svg {
   fill: black;
 }
 
@@ -320,19 +333,6 @@ body {
   width: 270px;
 }
 
-.section-lead__list {
-  display: flex;
-}
-
-.section-lead__item {
-  width: 270px;
-  height: auto;
-}
-
-.section-lead__item:not(:last-child) {
-  margin-right: 30px;
-}
-
 .section-about {
   padding-bottom: 94px;
 }
@@ -348,11 +348,11 @@ body {
   display: flex;
 }
 
-.section-about__item:not(:last-child) {
+.section-about-list__item:not(:last-child) {
   margin-right: 30px;
 }
 
-.section-about-overlay__wrapper {
+.section-about-overlay {
   position: relative;
 }
 
@@ -609,31 +609,6 @@ body {
   padding: 40px;
 }
 
-.modal__close-btn {
-  position: absolute;
-  top: 8px;
-  right: 8px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 30px;
-  height: 30px;
-  border-radius: 50%;
-  background: #ffffff;
-  border: 1px solid rgba(0, 0, 0, 0.1);
-  cursor: pointer;
-}
-
-.modal__close-btn:hover .modal__svg,
-.modal__close-btn:focus .modal__svg {
-  fill: var(--accent-color);
-  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-.modal__close-btn .modal__svg {
-  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
-}
-
 .modal__text {
   font-weight: bold;
   font-size: 20px;
@@ -641,6 +616,15 @@ body {
   text-align: center;
   letter-spacing: 0.03em;
   margin-bottom: 12px;
+}
+
+.modal__close-btn {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .modal__label {
@@ -759,6 +743,25 @@ body {
   padding: 8px 53px 9px 54px;
   margin: 0 auto;
   border: none;
+}
+
+.close-btn {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background: #ffffff;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+}
+
+.close-btn:hover .close-btn__svg,
+.close-btn:focus .close-btn__svg {
+  fill: var(--accent-color);
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.close-btn .close-btn__svg {
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .section-portfolio {
